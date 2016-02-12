@@ -36,7 +36,8 @@ apt-get update && apt-get upgrade -y  && apt-get install -y \
  iproute2 \
  net-tools \
  libpcap-dev \
- cpulimit
+ cpulimit \
+ vpcs
 
 
 #
@@ -57,11 +58,11 @@ cd /opt/gns3/gns3-gui ; git checkout v1.4.0 ; python3 setup.py install
 #-----------------------------------------------------------------------
 # compile and install vpcs, 64 bit version
 #
-cd /opt/gns3 ; \
-    wget -O - http://sourceforge.net/projects/vpcs/files/0.8/vpcs-0.8-src.tbz/download \
-    | bzcat | tar -xvf -
-cd /opt/gns3/vpcs-*/opt/gns3 ; ./mk.sh 64
-cp /opt/gns3/vpcs-*/opt/gns3/vpcs /usr/local/bin/vpcs
+#cd /opt/gns3 ; \
+#    wget -O - http://sourceforge.net/projects/vpcs/files/0.8/vpcs-0.8-src.tbz/download \
+#    | bzcat | tar -xvf -
+#cd /opt/gns3/vpcs-*/opt/gns3 ; ./mk.sh 64
+# cp /opt/gns3/vpcs-*/opt/gns3/vpcs /usr/local/bin/vpcs
 #
 # --------------------------------------------------------------------
 # compile and install iniparser (needed for iouyap) and 
